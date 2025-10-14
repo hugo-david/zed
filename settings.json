@@ -1,11 +1,20 @@
 {
+	"prettier": {
+		"allowed": false
+	},
+	"show_completions_on_input": true,
+	"show_completion_documentation": true,
+	"ui_font_weight": 500.0,
 	"agent": {
+		"play_sound_when_agent_done": true,
+		"always_allow_tool_actions": true,
 		"default_model": {
-			"provider": "anthropic",
-			"model": "claude-sonnet-4-5-latest"
+			"provider": "zed.dev",
+			"model": "claude-sonnet-4-5"
 		},
 		"model_parameters": []
 	},
+	"show_wrap_guides": false,
 	"preview_tabs": {
 		"enabled": false
 	},
@@ -21,11 +30,11 @@
 	"tab_size": 2,
 	"icon_theme": "Material Icon Theme",
 	"base_keymap": "VSCode",
-	"buffer_font_family": "CommitMono",
-	"buffer_font_weight": 500,
-	"ui_font_family": "CommitMono",
-	"ui_font_size": 14,
+	"buffer_font_family": "JetBrains Mono",
+	"ui_font_family": "JetBrains Mono",
+	"ui_font_size": 14.0,
 	"buffer_font_size": 15.0,
+	"buffer_font_weight": 500.0,
 	"terminal": {
 		"dock": "bottom",
 		"font_size": 15,
@@ -35,41 +44,56 @@
 	"theme": {
 		"mode": "dark",
 		"light": "One Light",
-		"dark": "One Dark"
+		"dark": "Github Dark Dimmed"
 	},
 	"features": {
 		"edit_prediction_provider": "zed"
 	},
-	"formatter": {
-		"language_server": {
-			"name": "biome"
-		}
-	},
-	"code_actions_on_format": {
-		"source.fixAll.biome": true,
-		"source.organizeImports.biome": true
-	},
-	"languages": {
-		"JavaScript": {
-			"code_actions_on_format": {
-				"source.fixAll.biome": true,
-				"source.organizeImports.biome": true
-			}
+	"formatter": [
+		{
+			"code_action": "source.fixAll.biome"
 		},
-		"TypeScript": {
-			"code_actions_on_format": {
-				"source.fixAll.biome": true,
-				"source.organizeImports.biome": true
-			}
+		{
+			"code_action": "source.organizeImports.biome"
 		},
-		"TSX": {
-			"code_actions_on_format": {
-				"source.fixAll.biome": true,
-				"source.organizeImports.biome": false,
-				"source.removeUnusedImports": true
+		{
+			"language_server": {
+				"name": "biome"
 			}
 		}
-	},
+	],
+	// "languages": {
+	// 	"JavaScript": {
+	// 		"formatter": [
+	// 			{
+	// 				"code_action": "source.fixAll.biome"
+	// 			},
+	// 			{
+	// 				"code_action": "source.organizeImports.biome"
+	// 			}
+	// 		]
+	// 	},
+	// 	"TypeScript": {
+	// 		"formatter": [
+	// 			{
+	// 				"code_action": "source.fixAll.biome"
+	// 			},
+	// 			{
+	// 				"code_action": "source.organizeImports.biome"
+	// 			}
+	// 		]
+	// 	},
+	// 	"TSX": {
+	// 		"formatter": [
+	// 			{
+	// 				"code_action": "source.fixAll.biome"
+	// 			},
+	// 			{
+	// 				"code_action": "source.removeUnusedImports"
+	// 			}
+	// 		]
+	// 	}
+	// },
 	"diagnostics": {
 		"button": true,
 		"include_warnings": true,
