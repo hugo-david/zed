@@ -70,27 +70,6 @@
 			}
 		}
 	],
-	// "languages": {
-	// 	"JavaScript": {
-	// 		"formatter": [
-	// 			{
-	// 				"code_action": "source.fixAll.biome"
-	// 			},
-	// 			{
-	// 				"code_action": "source.organizeImports.biome"
-	// 			}
-	// 		]
-	// 	},
-	// 	"TypeScript": {
-	// 		"formatter": [
-	// 			{
-	// 				"code_action": "source.fixAll.biome"
-	// 			},
-	// 			{
-	// 				"code_action": "source.organizeImports.biome"
-	// 			}
-	// 		]
-	// 	},
 	// 	"TSX": {
 	// 		"formatter": [
 	// 			{
