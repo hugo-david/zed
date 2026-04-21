@@ -3,17 +3,20 @@
 	"theme": {
 		"mode": "dark",
 		"light": "One Light",
-		"dark": "Ayu Mirage"
+		"dark": "GitHub Dark Classic"
 	},
-	"icon_theme": "Zed (Default)",
+	"icon_theme": {
+		"mode": "dark",
+		"light": "Zed (Default)",
+		"dark": "Zed (Default)"
+	},
 
 	// === POLICES & TYPOGRAPHIE ===
 	"ui_font_size": 14.0,
 	"ui_font_weight": 500.0,
 	"buffer_font_size": 15.0,
 	"buffer_font_weight": 500.0,
-	// "buffer_font_family": "JetBrains Mono",
-	// "ui_font_family": "JetBrains Mono",
+	"buffer_font_family": "JetBrains Mono",
 
 	// === ÉDITEUR ===
 	"tab_size": 2,
@@ -83,18 +86,18 @@
 	},
 
 	// === PRÉDICTIONS D'ÉDITION ===
-	"features": {
-		"edit_prediction_provider": "zed"
-	},
 	"edit_predictions": {
+		"provider": "copilot",
 		"mode": "subtle"
 	},
 
 	// === AGENT IA ===
 	"agent": {
+		"tool_permissions": {
+			"default": "allow"
+		},
 		"default_profile": "write",
-		"play_sound_when_agent_done": false,
-		"always_allow_tool_actions": true,
+		"play_sound_when_agent_done": "never",
 		"default_model": {
 			"provider": "zed.dev",
 			"model": "claude-haiku-4-5"
@@ -104,8 +107,8 @@
 			"provider": "zed.dev"
 		},
 		"commit_message_model": {
-			"model": "claude-haiku-4.5",
-			"provider": "zed.dev"
+			"provider": "openai",
+			"model": "gpt-4o-mini"
 		},
 		"model_parameters": []
 	},
