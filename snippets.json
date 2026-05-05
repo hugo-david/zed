@@ -3,5 +3,39 @@
 		"prefix": "clg",
 		"body": ["console.log($1)", "$0"],
 		"description": "Logs to console"
+	},
+	"Adonis Controller": {
+		"prefix": "controller",
+		"body": [
+			"import type { HttpContext } from '@adonisjs/core/http'",
+			"",
+			"export default class ${1:Name}Controller {",
+			"  async ${2:handle}({ ${3:request, response} }: HttpContext) {",
+			"    $0",
+			"  }",
+			"}"
+		],
+		"description": "AdonisJS v7 controller class"
+	},
+	"Validation Error": {
+		"prefix": "validationError",
+		"body": [
+			"{",
+			"  message: '${1:The field is invalid}',",
+			"  rule: '${2:required}',",
+			"  field: '${3:fieldName}',",
+			"}"
+		],
+		"description": "AdonisJS validation error object"
+	},
+	"Error Object": {
+		"prefix": "error",
+		"body": [
+			"{",
+			"  status: ${1:400},",
+			"  message: '${2:Error message}',",
+			"}"
+		],
+		"description": "Error object with status and message"
 	}
 }
